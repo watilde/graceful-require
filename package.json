@@ -4,9 +4,9 @@
   "description": "Give require some options",
   "main": "index.js",
   "scripts": {
-    "pretest": "cp -r node_modules test_node_modules",
+    "pretest": "mv node_modules test_node_modules",
     "test": "node test.js",
-    "posttest": "rm -rf test_node_modules"
+    "posttest": "mv test_node_modules node_modules"
   },
   "repository": {
     "type": "git",
