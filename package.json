@@ -1,7 +1,7 @@
 {
   "name": "graceful-require",
   "version": "0.0.1",
-  "description": "",
+  "description": "Give require some options",
   "main": "index.js",
   "scripts": {
     "pretest": "cp -r node_modules test_node_modules",
