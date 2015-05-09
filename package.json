@@ -1,0 +1,24 @@
+{
+  "name": "graceful-require",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "cp -r node_modules test_node_modules",
+    "test": "node test.js",
+    "posttest": "rm -rf test_node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watilde/graceful-require.git"
+  },
+  "author": "Daijiro Wachi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watilde/graceful-require/issues"
+  },
+  "homepage": "https://github.com/watilde/graceful-require#readme",
+  "devDependencies": {
+    "text-table": "^0.2.0"
+  }
+}
