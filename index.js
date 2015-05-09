@@ -5,8 +5,8 @@ module.exports = function (path) {
       return req(module_name);
     } catch (err) {
       var resolve = null;
-      req.main.paths.forEach(function (item) {
-        if (resolve) return;
+      req.main.paths.some(function (item) {
+        if (resolve) return true;
         item = item.replace('node_modules', path);
         try {
           var main = req(item + '/' + module_name + '/package.json').main;
