@@ -1,4 +1,5 @@
-module.exports = function (path) {
+var path = require('path');
+module.exports = function (pathname) {
   var req = require;
   return function (module_name) {
     try {
@@ -7,10 +8,11 @@ module.exports = function (path) {
       var resolve = null;
       req.main.paths.some(function (item) {
         if (resolve) return true;
-        item = item.replace('node_modules', path);
+        item = item.replace('node_modules', pathname);
         try {
-          var main = req(item + '/' + module_name + '/package.json').main;
-          main = item + '/' + module_name + '/' + main;
+          var main = path.join(item, module_name, 'package.json');
+          main = req(main).main;
+          main = path.join(item, module_name, main);
           req(main);
           resolve = main;
         } catch (e) {} // do nothing
