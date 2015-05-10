@@ -1,5 +1,4 @@
-# graceful-require
-
+# graceful-require [![Build Status](https://api.travis-ci.org/watilde/graceful-require.svg)](https://travis-ci.org/watilde/graceful-require)
 Give require some options
 
 ## Installation
